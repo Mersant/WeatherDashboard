@@ -1,0 +1,77 @@
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 30px;
+
+    border-bottom: 10px;
+    border-style: solid;
+    border-color: white;
+}
+header h1 {
+    font-size: 400%;
+}
+
+body {
+    color: white;
+    background-color: black;
+}
+
+#leftSidebar {
+    display: inline-block;
+    margin: 15px;
+    font-size: 200%;
+    line-height: 150%;
+}
+#leftSidebarTop {
+    padding-bottom: 10px;
+    border-bottom-width: 3px;
+    border-style: solid;
+    border-color: white;
+    margin-bottom: 30px;
+}
+#leftSidebar ul li {
+    padding-bottom: 3px;
+    border-bottom-width: 3px;
+    border-style: solid;
+    border-color: white;
+}
+
+#mainPageContent {
+    position: absolute;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+#cityInfoContainer {
+    display: inline-block;
+    font-size: 150%;
+    border-top: 5px;
+    border-bottom: 5px;
+    border-style: solid;
+    border-color: white;
+    padding: 10px;
+}
+#cityInfoContainer h1 {
+    font-size: 150%;
+}
+#cityInfoContainer ul li {
+    line-height: 130%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#forecastContainer {
+    position: absolute;
+    border-top: 5px;
+    border-style: solid;
+    border-color: white;
+    padding: 10px;
+    display: inline-block;
+    font-size: 150%;
+}
