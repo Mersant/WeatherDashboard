@@ -21,8 +21,8 @@
         <div id="leftSidebar">
             <div id="leftSidebarTop">
                 <h1>Search for a City</h1>
-                <input type="text" id="citySelect">
-                <button id="submit">Search.</button>
+                <input type="text" id="citySelect" value="Atlanta">
+                <button id="searchCity">Search.</button>
             </div>
             <ul>
                 <li>Portland</li>
@@ -35,12 +35,12 @@
 
         <div id="mainPageContent">
             <div id="cityInfoContainer">
-                <h1 id="cityNameDate">Atlanta (8/15/2022)</h1>
+                <h1 id="cityNameDate"></h1>
                 <ul>
-                    <li>Temp: <span id="cityTemp">88.08</span>°F</li>
-                    <li>Wind: <span id="cityWind">12.87</span> MPH</li>
-                    <li>Humidity: <span id="cityHumidity">93</span>%</li>
-                    <li>UV Index: <span id="cityUVIndex">0.21</span></li>
+                    <li>Temp: <span id="cityTemp"></span>°F</li>
+                    <li>Wind: <span id="cityWind"></span> MPH</li>
+                    <li>Humidity: <span id="cityHumidity"></span>%</li>
+                    <li>UV Index: <span id="cityUVIndex"></span></li>
                 </ul>
             </div>
             
@@ -48,7 +48,7 @@
                 <h1>5-Day Forecast:</h1>
                 
                 <div id="day1Forecast" class="dailyForecast">
-                    Day 1
+                    <span class="dayTitle">Day 1</span>
                     <ul>
                         <li>Temp: <span id="day1Temp">88.08</span>°F</li>
                         <li>Wind: <span id="day1Wind">12.87</span> MPH</li>
@@ -56,7 +56,7 @@
                     </ul>
                 </div>
                 <div id="day2Forecast" class="dailyForecast">
-                    Day 2
+                    <span class="dayTitle">Day 2</span>
                     <ul>
                         <li>Temp: <span id="day2Temp">88.08</span>°F</li>
                         <li>Wind: <span id="day2Wind">12.87</span> MPH</li>
@@ -64,7 +64,7 @@
                     </ul>
                 </div>
                 <div id="day3Forecast" class="dailyForecast">
-                    Day 3
+                    <span class="dayTitle">Day 3</span>
                     <ul>
                         <li>Temp: <span id="day3Temp">88.08</span>°F</li>
                         <li>Wind: <span id="day3Wind">12.87</span> MPH</li>
@@ -72,7 +72,7 @@
                     </ul>
                 </div>
                 <div id="day4Forecast" class="dailyForecast">
-                    Day 4
+                    <span class="dayTitle">Day 4</span>
                     <ul>
                         <li>Temp: <span id="day4Temp">88.08</span>°F</li>
                         <li>Wind: <span id="day4Wind">12.87</span> MPH</li>
@@ -80,7 +80,7 @@
                     </ul>
                 </div>
                 <div id="day5Forecast" class="dailyForecast">
-                    Day 5
+                    <span class="dayTitle">Day 5</span>
                     <ul>
                         <li>Temp: <span id="day5Temp">88.08</span>°F</li>
                         <li>Wind: <span id="day5Wind">12.87</span> MPH</li>

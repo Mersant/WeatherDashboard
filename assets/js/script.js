@@ -1,5 +1,8 @@
 
-$("#submit").click(function (e) {
+$("#searchCity").on("click", updateToday);
+
+function updateToday() {
+    console.log("hi")
     if($("#citySelect").val() != "") {
         $.ajax({
             type: "POST",
@@ -13,13 +16,22 @@ $("#submit").click(function (e) {
                 $("#cityWind").text(result["list"][0]["wind"]["speed"]);
                 $("#cityHumidity").text(result["list"][0]["main"]["humidity"]);
                 updateUVI( result["city"]["coord"]["lat"], result["city"]["coord"]["lon"] );
+
+                // Now update the daily forecast
+                for(var i=1; i<= 6; i++) { // i starts at 1 since 0th element is today
+                    $("#day" + i + "Temp").text(result["list"][i]["main"]["temp"]);
+                    $("#day" + i + "Wind").text(result["list"][i]["wind"]["speed"]);
+                    $("#day" + i + "Humidity").text(result["list"][i]["main"]["humidity"]);
+                }
+
             },
             error: function (xhr, status, error) {
                 alert("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText + ". Please retype the name of the city")
             }
         });
     }
-});
+}
+updateToday();
 
 // Make seperate API call to update UVI
 function updateUVI(lat, lon) {
@@ -56,3 +68,5 @@ function updateUVI(lat, lon) {
         }
     })
 }
+
+// Finally, update the daily forecast

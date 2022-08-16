@@ -17,6 +17,7 @@ header h1 {
 }
 
 body {
+    animation: fadeIn 0.5s;
     color: white;
     background-color: black;
 }
@@ -80,14 +81,20 @@ body {
 }
 
 .dailyForecast {
-    min-width: 250px;
+    display: inline-block;
+    min-width: 500px;
     padding: 7px;
     margin: 5px;
     background-color: white;
     color: black;
     border-radius: 5px;
 }
-.dailyForecast ul li {
-    display: block;
-    
+.dayTitle {
+    text-decoration: underline;
+    font-size: 110%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
