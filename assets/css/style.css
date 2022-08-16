@@ -1,7 +1,6 @@
 html {
     font-family: "Roboto", sans-serif;
 }
-
 header {
     text-align: center;
     color: white;
@@ -12,6 +11,7 @@ header {
     border-style: solid;
     border-color: white;
 }
+/* Title of the webpage */
 header h1 {
     font-size: 400%;
 }
@@ -21,7 +21,12 @@ body {
     color: white;
     background-color: black;
 }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
+/* leftSideBar contains the city search bar and button as well as the history list of what the user has searched for so far */
 #leftSidebar {
     display: inline-block;
     margin: 15px;
@@ -35,13 +40,23 @@ body {
     border-color: white;
     margin-bottom: 30px;
 }
+/* These are the city names the user search for in the past */
 #leftSidebar ul li {
     padding-bottom: 3px;
     border-bottom-width: 3px;
     border-style: solid;
     border-color: white;
 }
+#leftSidebar ul li:hover {
+    color: rgb(168, 168, 168);
+    border-color: rgb(168, 168, 168);
+    cursor: grab;
+}
+#leftSidebar ul li:active {
+    cursor: grabbing;
+}
 
+/* mainPageContent contains all weather forecasts */
 #mainPageContent {
     position: absolute;
     display: inline-block;
@@ -49,6 +64,7 @@ body {
     margin-left: 30px;
 }
 
+/* cityInfoContainer contains today's forecast as well as the city's name and today's date */
 #cityInfoContainer {
     display: inline-block;
     font-size: 150%;
@@ -66,10 +82,8 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-#cityUVIndex {
-    background-color: purple;
-}
 
+/* forecastContainer contains the daily forecasts */
 #forecastContainer {
     position: absolute;
     border-top: 5px;
@@ -80,6 +94,7 @@ body {
     font-size: 150%;
 }
 
+/* .dailyForecast are the individual daily forecasts */
 .dailyForecast {
     display: inline-block;
     min-width: 500px;
@@ -92,12 +107,8 @@ body {
     border-width: 2px;
     border-color: white;
 }
+/* Which day the forecast is for, i.e. "Day 1" */
 .dayTitle {
     text-decoration: underline;
     font-size: 110%;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
 }

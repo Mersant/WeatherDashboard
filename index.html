@@ -17,14 +17,14 @@
     </header>
 
     <div>
-        
+        <!-- Contains the city search history and search bar -->
         <div id="leftSidebar">
             <div id="leftSidebarTop">
                 <h1>Search for a City</h1>
                 <input type="text" id="citySelect" value="Atlanta">
                 <button id="searchCity">Search.</button>
             </div>
-            <ul>
+            <ul id="citySearchList">
                 <li>Portland</li>
                 <li>Dayton</li>
                 <li>Columbus</li>
@@ -33,7 +33,9 @@
             </ul>
         </div>
 
+        <!-- Contains all forecasts -->
         <div id="mainPageContent">
+            <!-- Today's forecast -->
             <div id="cityInfoContainer">
                 <h1 id="cityNameDate"></h1>
                 <ul>
@@ -44,6 +46,7 @@
                 </ul>
             </div>
             
+            <!-- Forecast for the next 5 days -->
             <div id="forecastContainer">
                 <h1>5-Day Forecast:</h1>
                 
