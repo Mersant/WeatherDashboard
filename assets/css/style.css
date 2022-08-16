@@ -88,6 +88,9 @@ body {
     background-color: white;
     color: black;
     border-radius: 5px;
+    border-style: double;
+    border-width: 2px;
+    border-color: white;
 }
 .dayTitle {
     text-decoration: underline;

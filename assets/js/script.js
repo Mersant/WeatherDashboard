@@ -2,7 +2,6 @@
 $("#searchCity").on("click", updateToday);
 
 function updateToday() {
-    console.log("hi")
     if($("#citySelect").val() != "") {
         $.ajax({
             type: "POST",
@@ -11,14 +10,14 @@ function updateToday() {
             success: function (result, status, xhr) {
                 // Reset h1 so it contains the city name and today's date
                 var now = moment();
-                $("#cityNameDate").text( $("#citySelect").val() + ", " + now.format('MMMM Do YYYY') );
+                $("#cityNameDate").text( $("#citySelect").val() + ", Today (" + now.format('MMMM Do YYYY') + ")" );
                 $("#cityTemp").text(result["list"][0]["main"]["temp"]);
                 $("#cityWind").text(result["list"][0]["wind"]["speed"]);
                 $("#cityHumidity").text(result["list"][0]["main"]["humidity"]);
                 updateUVI( result["city"]["coord"]["lat"], result["city"]["coord"]["lon"] );
 
                 // Now update the daily forecast
-                for(var i=1; i<= 6; i++) { // i starts at 1 since 0th element is today
+                for(var i=1; i<= 5; i++) { // i starts at 1 since 0th element is today
                     $("#day" + i + "Temp").text(result["list"][i]["main"]["temp"]);
                     $("#day" + i + "Wind").text(result["list"][i]["wind"]["speed"]);
                     $("#day" + i + "Humidity").text(result["list"][i]["main"]["humidity"]);
